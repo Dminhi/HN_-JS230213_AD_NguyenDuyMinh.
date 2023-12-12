@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SelectCard</title>
+    <link rel="stylesheet" href="./css/SelectCard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <div class="container">
+        <form class="form">
+            <div class="heading">Select card</div>
+            <div class="form1">
+                <div class="img">
+                    <img class="img1" id="master" src="https://adina.com.vn/wp-content/uploads/2016/07/mastercard_logo.png" alt="" /><i class="fa-solid fa-check"></i>
+                </div>
+                <div class="img">
+                    <img class="img1" id="paypal" src="https://logowik.com/content/uploads/images/paypal-new-20232814.logowik.com.webp" alt="" />
+                </div>
+                <div class="img">
+                    <img class="img1" id="visa" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="" />
+                </div>
+                <div class="img">
+                    <img class="img1" id="american" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/1280px-American_Express_logo_%282018%29.svg.png" alt="" />
+                </div>
+                <div class="img">
+                    <img class="img1" id="discover" src="https://logowik.com/content/uploads/images/discover-card4683.jpg" alt="" />
+                </div>
+            </div>
+            <form id="cardForm">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" maxlength="16" id="cardNumber" class="form2-input" required pattern="\d{16}" placeholder="Enter 16-digit card number" />
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" class="form2-input" required placeholder="MM/YYYY" />
+                <label for="cvv">CVV:</label>
+                <input type="text" maxlength="3" id="cvv" class="form2-input" required pattern="\d{3}" placeholder="Enter 3-digit CVV" />
+                <button type="button" class="save" onclick="saveCard()">Save</button>
+            </form>
+
+            <hr />
+
+            <table border="1" id="cardList">
+                <thead>
+                    <tr>
+                        <th>Card Number</th>
+                        <th>Expiry Date</th>
+                        <th>CVV</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Danh sách thẻ sẽ được hiển thị ở đây -->
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <script src="./js/SelectCard.js"></script>
+</body>
+
+</html>
